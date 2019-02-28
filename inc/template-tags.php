@@ -34,3 +34,13 @@ function qod_numbered_pagination( $query_type = '' ) {
 		echo '</nav>';
 	endif;
 }
+
+function qod_order_posts( $query ) {
+    if ( is_home() && $query->is_main_query() ) {
+		$query->set( 'orderby', 'title' );
+        $query->set( 'order', 'random' );
+        $query->set( 'posts_per_page', 1 );
+        return;
+    } 
+}
+add_filter( 'pre_get_posts', 'qod_order_posts', 1 );

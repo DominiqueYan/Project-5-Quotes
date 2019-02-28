@@ -2,6 +2,8 @@
 /**
  * The template for displaying archive pages.
  *
+ * Template Name: Archives
+ *  
  * @package QOD_Starter_Theme
  */
 
