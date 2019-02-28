@@ -22,8 +22,12 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
+                
+
 
 			<?php endwhile; ?>
+            
+
             <button type ="button" id="another-one">Show Me Another!</button>
 			<?php the_posts_navigation(); ?>
 
